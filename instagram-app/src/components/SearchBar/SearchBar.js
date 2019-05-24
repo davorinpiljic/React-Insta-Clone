@@ -5,16 +5,20 @@ const SearchBar = props => {
     return(
         <div className="searchBar">
             <header className="searchHeader">
-                <img src='' alt="app icon" />
-                <h1>Instagra</h1>
-                <form>
+                <img src='https://img.icons8.com/ios/50/000000/instagram-new.png' alt="app icon" />
+                <img src="https://img.icons8.com/material/32/000000/vertical-line.png" />
+                <h1>Picgram</h1>
+             
+             <form>
                     <input type="text"
                     placeholder="search"
                     >
                     </input>
-                </form>
+                </form> 
                 <div>
-                    icons
+                    <img src="https://img.icons8.com/material-outlined/32/000000/compass.png" />
+                    <img src="https://img.icons8.com/windows/32/000000/gender-neutral-user.png" />
+                    <img src="https://img.icons8.com/windows/32/000000/hearts.png" />
                 </div>
             </header>
 

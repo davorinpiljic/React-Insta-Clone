@@ -35,9 +35,8 @@
   }
 }
 
-.userHeader {
+.PostContainer {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: column;
+  align-content: flex-start;
 }

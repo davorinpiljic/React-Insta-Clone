@@ -1,0 +1,26 @@
+.PostHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.PostImage {
+    height: 100%;
+    width: 100%;
+    max-height: 400px;
+    max-width: 400px;
+    border-radius: 0;
+}
+
+.CommentSection {
+    margin: 0;
+    flex-direction: column;
+    display: flex;
+    justify-items: flex-start;
+}
+
+img {
+    height: 33px;
+    border-radius: 33px;
+}
+

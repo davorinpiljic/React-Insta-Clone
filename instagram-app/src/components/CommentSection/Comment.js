@@ -1,4 +1,5 @@
 import React from 'react'
+import './CommentSection.css'
 
 const Comment = props => {
     return(
@@ -10,3 +11,4 @@ const Comment = props => {
 }
 
 export default Comment
+
