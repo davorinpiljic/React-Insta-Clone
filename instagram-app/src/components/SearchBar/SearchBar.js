@@ -7,7 +7,7 @@ const SearchBar = props => {
             <header className="searchHeader">
                 <img src='https://img.icons8.com/ios/50/000000/instagram-new.png' alt="app icon" />
                 <img src="https://img.icons8.com/material/32/000000/vertical-line.png" />
-                <h1>Picgram</h1>
+                <h1>Instagram</h1>
              
              <form>
                     <input type="text"

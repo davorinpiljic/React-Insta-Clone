@@ -11,6 +11,7 @@ const Post = props => {
         <div className="PostHeader">
             <div><img src={props.user.thumbnailUrl} alt='user logo'/></div>
             <div>{props.user.username}</div>
+            {/* <div>{console.log(props.id)}</div> */}
         </div>
 
         <div> 
@@ -21,16 +22,9 @@ const Post = props => {
                 <img src="https://img.icons8.com/windows/32/000000/speech-bubble.png" />
             </div>
 
-            <div className="CommentSection">{props.user.likes} likes</div>
+            <div className="CommentSection"><div>{props.user.likes} likes</div>
             <CommentSection comments={props.user.comments}/>
-            <div>{props.user.timestamp}</div>
-            <form>
-                <input 
-                    type="text"
-                    placeholder="placeholder text"
-                >
-                </input>
-            </form>
+            </div>
         </div>
     </div>)
 }

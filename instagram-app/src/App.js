@@ -11,12 +11,17 @@ import Post from './components/PostContainer/Post'
 import SearchBar from './components/SearchBar/SearchBar'
 
 class App extends React.Component {
-  constructor(props) {
+  constructor() {
     super()
     this.state = {
-      user: dummyData
+      user: []
     }
   }
+
+  componentDidMount() {
+    this.setState({user: dummyData})
+   }
+
 
   render() {
 
@@ -25,7 +30,7 @@ class App extends React.Component {
         <SearchBar />
         <div className="PostContainer">
           {this.state.user.map((element, key) => {
-            return(<Post key={key} user={element} />)
+            return(<Post key={key} id={key} user={element} />)
           })}
         </div>
     </div>
