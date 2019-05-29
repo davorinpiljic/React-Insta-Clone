@@ -10,6 +10,11 @@ import dummyData from './dummy-data'
 import Post from './components/PostContainer/Post'
 import SearchBar from './components/SearchBar/SearchBar'
 
+import PostsPage from './components/PostContainer/PostsPage'
+import withAuthenticate from './components/authentication/withAuthenticate'
+
+const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)
+
 class App extends React.Component {
   constructor() {
     super()
@@ -41,6 +46,7 @@ class App extends React.Component {
 
   return (
     <div className="App">
+      <ComponentFromWithAuthenticate />
         <SearchBar 
           searchHandle={this.searchHandle}
           commentFilter={this.commentFilter}/>
