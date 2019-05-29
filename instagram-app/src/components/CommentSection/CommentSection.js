@@ -9,7 +9,7 @@ class CommentSection extends React.Component {
         super(props)
         this.state = {
         comments: [],
-        index: 0
+        comment: '',
        }
     }
 
@@ -17,28 +17,36 @@ class CommentSection extends React.Component {
         this.setState({comments: this.props.comments})
     }
 
-
     addNewComment = (event) => {
-        this.setState({comments: event.target.value})
+        event.preventDefault() 
+        const newComment = {text: this.state.comment, username: 'placeholder'}
+        this.setState({
+            comments: [...this.state.comments, newComment]
+        })
+    }
 
-        console.log(event.target.value)
+    commentHandle = (event) => {
+
+        this.setState({comment: event.target.value})
     }
 
     render() {
     return(
-        <div className="Comment">
-            <Comment 
-                username={this.state.comments.map((element, key) => {
-                    return(<div key={key}><h3>{element.username}</h3>
-                        <p>{element.text}</p></div>)
-                })}
-                text={this.state.comments.text}
-            />
-            <form>
+        <div className="Comment"> 
+                {this.state.comments.map((element, key) => {
+                    return(<Comment 
+                            key={key} 
+                            id={key}
+                            username={element.username} 
+                            text={element.text}
+                        />)
+                    })}
+            
+            <form onSubmit={this.addNewComment}>
                 <input 
                     type="text"
                     placeholder="placeholder text"
-                    onChange={this.addNewComment}
+                    onChange={this.commentHandle}
                 >
                 </input>
             </form>
