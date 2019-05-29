@@ -1,0 +1,16 @@
+.Comment {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;    
+    justify-items: center;
+}
+
+
+h3 {
+    font-size: 0.8rem;
+}
+
+p {
+    font-size: 0.6rem;
+}
