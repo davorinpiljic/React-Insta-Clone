@@ -12,7 +12,6 @@ class Post extends React.Component {
         }
     }
 
-    
     addLikes = () => {
         let likes = this.state.likes + 1
         this.setState({likes: likes})
@@ -25,7 +24,6 @@ class Post extends React.Component {
         <div className="PostHeader">
             <div><img src={this.props.user.thumbnailUrl} alt='user logo'/></div>
             <div>{this.props.user.username}</div>
-            {/* <div>{console.log(props.id)}</div> */}
         </div>
 
         <div> 
@@ -37,17 +35,11 @@ class Post extends React.Component {
                 />
             </div>
 
-
-
             <div className="CommentSection"><div>{this.state.likes} likes</div>
-
-
-            <div className="photo-div">
-
-            <img src="https://img.icons8.com/windows/32/000000/speech-bubble.png" />
+                <div className="photo-div">
+                <img src="https://img.icons8.com/windows/32/000000/speech-bubble.png" />
             </div>
-
-            <CommentSection comments={this.props.user.comments}/>
+                <CommentSection comments={this.props.user.comments}/>
             </div>
         </div>
     </div>)
